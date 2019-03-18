@@ -11,5 +11,4 @@ while read -r line; do
     bam=`curl  --silent --list-only  $ftp_url/${sample}/exome_alignment/ | grep ^"${sample}".mapped.*.bam$ `;
     echo "BAM filename $bam";
     samtools view -bh ${ftp_url}/${sample}/exome_alignment/${bam} $region > ${dest_dir}/chr1.${bam};
-    rm ${bam}.bai;
 done < "$samples_file"
