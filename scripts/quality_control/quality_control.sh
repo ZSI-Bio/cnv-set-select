@@ -1,0 +1,1 @@
+docker run --rm -v /tmp:/tmp -w /tmp biodatageeks/cnv-opt-target-qc Rscript -e "library('TARGET.QC');run_TARGET.QC(0.9,20,4000,20,2000,20,80,'/tmp/1_cov_NA.csv','/tmp/qc_cov_table.csv','/tmp/20130108.exome.targets.chr1.bed','/tmp/qc_bed.bed')";
